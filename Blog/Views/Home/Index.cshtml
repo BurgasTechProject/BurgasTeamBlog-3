@@ -1,0 +1,23 @@
+﻿@{
+    ViewBag.Title = "Party";
+}
+
+
+
+
+
+<header>
+    <div class="row">
+        <h1 class="col-sm-offset-4">Партита за запознанства</h1>
+    </div>
+</header>
+<div>
+    <img class="col-sm-offset-2" style="height: 10%; width: 65%" src="@Url.Content("~/Content/Images/Party.jpg")" alt="" />
+</div>
+
+<div>
+    <ul>
+        <li class="btn btn-group-justified btn-lg">@Html.ActionLink("Научете повече", "ListCategories", "Home", null, new { @class = "page-scroll" })</li>
+    </ul>
+</div>
+
