@@ -16,8 +16,9 @@
         </p>
         <small class="author">
             автор: @Model.Author.FullName
+            <div>дата:@Model.Date</div>
         </small>
-        <footer class="pull-right">
+        <div class="pull-left">
             @if (User.IsInRole("Admin") || Model.IsUserAuthor(User.Identity.Name))
             {
                 @Html.ActionLink("Edit", "Edit", "Article", new { @id = Model.Id }, new { @class = "btn btn-success btn-xs" })
@@ -25,7 +26,11 @@
             }
            
             @Html.ActionLink("Back", "List", "Article", null, new { @class = "btn btn-default btn-xs" })
-        </footer>
+        </div>
     </article>
 </div>
 <hr />
+
+<div>
+@Html.ActionLink("Записване", "Create", "Reserves", null, new { @class = "btn btn-default btn-xs" })
+</div>

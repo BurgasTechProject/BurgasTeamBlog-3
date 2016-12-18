@@ -155,7 +155,8 @@ namespace Blog.Controllers
                 {
                     UserName = model.Email,
                     FullName = model.FullName,
-                    Email = model.Email
+                    Email = model.Email,
+                    Gender = model.Gender
                 };
 
                 var result = await UserManager.CreateAsync(user, model.Password);

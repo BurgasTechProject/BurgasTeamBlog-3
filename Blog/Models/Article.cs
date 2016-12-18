@@ -17,7 +17,9 @@ namespace Blog.Models
             this.AuthorId = authorId;
             this.Title = title;
             this.Content = content;
-            this.CategoryId = categoryId;     
+            this.CategoryId = categoryId;
+            this.Reservations = new HashSet<Reserve>();
+            this.Date = DateTime.Now;   
         }
 
         [Key]
@@ -44,5 +46,8 @@ namespace Blog.Models
         {
             return this.Author.UserName.Equals(username);
         }
+
+        public DateTime Date { get; set; }
+        public ICollection<Reserve> Reservations { get; set; }
     }
 }

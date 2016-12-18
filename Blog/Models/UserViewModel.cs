@@ -12,7 +12,8 @@ namespace Blog.Models
         public string Email { get; set; }
         [Required]
         public string FullName { get; set; }
-        
+
+        public string Gender { get; set; }
         public string Password { get; set; }
         [Compare("Password")]
         public string ConfirmPassword { get; set; }

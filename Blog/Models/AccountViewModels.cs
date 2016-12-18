@@ -75,6 +75,11 @@ namespace Blog.Models
         [Display(Name = "Име и Фамилия")]
         public string FullName { get; set; }
 
+        
+        [StringLength(50)]
+        [Display(Name = "Пол")]
+        public string Gender { get; set; }
+
         [Required]
         [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 1)]
         [DataType(DataType.Password)]

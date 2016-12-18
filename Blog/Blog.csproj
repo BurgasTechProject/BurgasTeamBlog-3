@@ -201,6 +201,7 @@
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\ReservesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -213,6 +214,7 @@
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\IDbSer.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Reserve.cs" />
     <Compile Include="Models\Role.cs" />
     <Compile Include="Models\UserViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -294,6 +296,11 @@
     <Content Include="Views\Category\Index.cshtml" />
     <Content Include="Views\Category\ListArticlesOfCategory.cshtml" />
     <Content Include="Views\Home\ListCategories.cshtml" />
+    <Content Include="Views\Reserves\Create.cshtml" />
+    <Content Include="Views\Reserves\Delete.cshtml" />
+    <Content Include="Views\Reserves\Details.cshtml" />
+    <Content Include="Views\Reserves\Edit.cshtml" />
+    <Content Include="Views\Reserves\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
