@@ -9,6 +9,7 @@ namespace Blog.Models
 {
     public class Article
     {
+        private ICollection<Reserve> Reservations;
         public Article()
         {
         }
@@ -48,6 +49,12 @@ namespace Blog.Models
         }
 
         public DateTime Date { get; set; }
-        public ICollection<Reserve> Reservations { get; set; }
+
+        
+        public virtual ICollection<Reserve> Reserv
+        {
+            get { return this.Reservations; }
+            set { this.Reservations = value; }
+        }
     }
 }

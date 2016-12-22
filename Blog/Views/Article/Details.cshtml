@@ -1,5 +1,4 @@
 ﻿@model Blog.Models.Article
-
 @{
     ViewBag.Title = "Details";
 }
@@ -8,7 +7,7 @@
     <article>
         <header>
             <h2>
-                @Model.Title
+                @Html.Raw(Model.Title)
             </h2>
         </header>
         <p>
@@ -31,6 +30,20 @@
 </div>
 <hr />
 
+<div>  
+    @if (Model.Category.Id == 1)
+    {
+      @Html.ActionLink("Записване", "Create", "Reserves", null, new { @class = "btn btn-default btn-xs" })
+    }
+    else
+    {
+        @Html.ActionLink("Напишете коментар", "Create", "Reserves", null, new { @class = "btn btn-default btn-xs" })
+    }
+        
+</div>
 <div>
-@Html.ActionLink("Записване", "Create", "Reserves", null, new { @class = "btn btn-default btn-xs" })
+    @foreach (var reserv in Model.Reserv)
+    {
+        @reserv.Text;
+    }
 </div>

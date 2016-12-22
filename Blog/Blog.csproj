@@ -226,6 +226,7 @@
     <Content Include="Content\Images\Admin\Niki.jpg" />
     <Content Include="Content\Images\Admin\Valeri.jpg" />
     <Content Include="Content\Images\NewParty.jpg" />
+    <Content Include="Content\Images\news_image_80.jpg" />
     <Content Include="Content\Images\Party.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />

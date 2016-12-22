@@ -20,6 +20,9 @@ namespace Blog.Controllers
             return View(db.Reserves.ToList());
         }
 
+
+
+
         // GET: Reserves/Details/5
         public ActionResult Details(int? id)
         {
@@ -36,6 +39,7 @@ namespace Blog.Controllers
         }
 
         // GET: Reserves/Create
+        
         public ActionResult Create()
         {
             return View();
@@ -46,6 +50,7 @@ namespace Blog.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize]
         public ActionResult Create([Bind(Include = "Id,Text")] Reserve reserve)
         {
             if (ModelState.IsValid)

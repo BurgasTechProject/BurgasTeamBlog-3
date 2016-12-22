@@ -26,7 +26,7 @@ namespace Blog.Controllers
             using (var database = new BlogDbContext())
             {
                 var articles = database.Articles
-                .Include(a => a.Author)
+                .Include(a => a.Author).Include(a => a.Reserv)
                 .ToList();
                 return View(articles);
             }
@@ -64,7 +64,7 @@ namespace Blog.Controllers
         }
 
         //Post
-        [HttpPost]
+        [HttpPost, ValidateInput(false)]
         [Authorize(Roles = "Admin")]
         [ValidateAntiForgeryToken]
         public ActionResult Create(ArticleViewModel model)
